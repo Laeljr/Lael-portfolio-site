@@ -23,6 +23,14 @@ library.add(fas, fab)
 // Create app
 const app = createApp(App)
 
+// ✅ GitHub Pages redirect fix
+// If coming from 404.html redirect, navigate to the correct route
+const params = new URLSearchParams(window.location.search)
+const redirectPath = params.get('redirect')
+if (redirectPath) {
+  router.replace(redirectPath)
+}
+
 app.use(router)
 
 // ✅ Register Font Awesome component globally
