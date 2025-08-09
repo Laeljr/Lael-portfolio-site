@@ -1,13 +1,14 @@
 // vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import path from 'path' // <-- Add this line
+import path from 'path'
 
 export default defineConfig({
+  base: '/Lael-portfolio-site/', // 👈 Required for GitHub Pages
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // <-- This line sets up @ alias
+      '@': path.resolve(__dirname, './src'),
     },
   },
 })

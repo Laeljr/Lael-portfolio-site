@@ -70,7 +70,7 @@
 
             <div class="relative" data-aos="fade-up" data-aos-delay="200">
               <div class="absolute -left-[17px] top-1 w-5 h-5 bg-cyan-400 rounded-full shadow-md animate-pulse"></div>
-              <h4 class="text-xl font-semibold text-white">2019 – Computer Science Degree</h4>
+              <h4 class="text-xl font-semibold text-white">2023 – Computer Science Degree</h4>
               <p class="text-gray-300 text-sm mt-1">
                 Completed a 4-year degree, building solid foundations in theory and practice.
               </p>
