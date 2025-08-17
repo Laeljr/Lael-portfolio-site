@@ -1,0 +1,5 @@
+package com.lael.site;
+
+import com.getcapacitor.BridgeActivity;
+
+public class MainActivity extends BridgeActivity {}

@@ -1,0 +1,6 @@
+{
+  "appId": "com.lael.portfolio",
+  "appName": "Lael Portfolio",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

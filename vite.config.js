@@ -1,10 +1,9 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
-  base: '/Lael-portfolio-site/', // 👈 Required for GitHub Pages
+  base: './',
   plugins: [vue()],
   resolve: {
     alias: {

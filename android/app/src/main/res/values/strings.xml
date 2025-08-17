@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">lael_site</string>
+    <string name="title_activity_main">lael_site</string>
+    <string name="package_name">com.lael.site</string>
+    <string name="custom_url_scheme">com.lael.site</string>
+</resources>

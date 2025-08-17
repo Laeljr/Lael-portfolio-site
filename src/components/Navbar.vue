@@ -2,13 +2,26 @@
   <section>
     <nav
       :class="[
-        'fixed top-0 w-full z-50 flex justify-center transition-all duration-300 backdrop-blur-sm',
+        'fixed top-0 w-full z-50 flex items-center px-6 transition-all duration-300 backdrop-blur-sm',
         isShrunk ? 'py-2 bg-dark-surface/90 shadow-md' : 'py-4 bg-dark-surface/80 shadow-md'
       ]"
     >
-      <!-- Desktop Navigation -->
+      <!-- 🔹 Logo (Clickable: Name + Profile Pic) -->
+      <router-link
+        to="/"
+        class="flex items-center space-x-3 hover:opacity-90 transition"
+      >
+        <img
+          src="/src/assets/pro.jpg"
+          alt="Profile"
+          class="w-10 h-10 rounded-full border-2 border-neon-blue shadow-glow"
+        />
+        <span class="text-white font-bold text-lg name-glow">Lael Mulenga</span>
+      </router-link>
+
+      <!-- Desktop Navigation (Centered) -->
       <ul
-        class="hidden md:flex items-center space-x-8 px-6 py-2 rounded-full bg-dark-card/70 shadow-neon text-white font-semibold text-lg"
+        class="hidden md:flex items-center space-x-8 px-6 py-2 rounded-full bg-dark-card/70 shadow-neon text-white font-semibold text-lg absolute left-1/2 transform -translate-x-1/2"
       >
         <li v-for="link in links" :key="link.to">
           <router-link
@@ -24,19 +37,12 @@
         </li>
       </ul>
 
-      <!-- Hamburger (Mobile) -->
+      <!-- 🔹 Mobile Button (Menu Text Instead of Hamburger) -->
       <button
         @click="toggleMenu"
-        class="md:hidden text-white absolute right-6 top-1/2 transform -translate-y-1/2"
+        class="md:hidden text-white ml-auto font-semibold text-lg"
       >
-        <svg v-if="!menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-        </svg>
-        <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        {{ menuOpen ? 'Close' : 'Menu' }}
       </button>
 
       <!-- Mobile Dropdown -->
@@ -100,5 +106,23 @@ const links = [
 .fade-leave-to {
   opacity: 0;
   transform: translateY(-10px);
+}
+
+/* 🔹 Neon Glow Effect for Profile Pic */
+.shadow-glow {
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+  transition: box-shadow 0.3s ease;
+}
+.shadow-glow:hover {
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff, 0 0 60px #00f0ff;
+}
+
+/* 🔹 Neon Glow Effect for Name */
+.name-glow {
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+.name-glow:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
 }
 </style>
